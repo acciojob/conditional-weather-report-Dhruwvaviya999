@@ -1,4 +1,5 @@
-import WeatherDisplay from './WeatherDisplay.jsx'
+import WeatherDisplay from './WeatherDisplay.jsx';
+import React from "react";
 
 const weathers = [
   { id: 1, temperature: 30, conditions: "Sunny" },
