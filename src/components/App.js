@@ -1,21 +1,17 @@
-import WeatherDisplay from './WeatherDisplay.jsx';
 import React from "react";
+import './../styles/App.css';
+import WeatchDisplay from "./WeatherDisplay"
+const App = () => {
+  const [data,setData] = React.useState(null)
 
-const weathers = [
-  { id: 1, temperature: 30, conditions: "Sunny" },
-  { id: 5, temperature: 10, conditions: "Snowy" }
-];
-
-function App() {
+  React.useEffect(()=>{
+  setData({ temperature: 25, conditions: "Sunny" })
+},[])
   return (
-    <>
-      {
-        weathers.map((data, index) => {
-          return <WeatherDisplay key={data.id} temperature={data.temperature} conditions={data.conditions} />
-        })
-      }
-    </>
+    <div>
+    {data&&  <WeatchDisplay data={data}/>}
+    </div>
   )
 }
 
-export default App
+export default App
