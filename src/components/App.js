@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import WeatherDisplay from './WeatherDisplay.jsx'
 
 const weathers = [
