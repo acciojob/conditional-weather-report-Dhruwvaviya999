@@ -1,12 +1,23 @@
+import { useState } from 'react'
+import WeatherDisplay from './components/WeatherDisplay.jsx'
 
-import React from "react";
-import './../styles/App.css';
+const weathers = [
+  { id: 1, temperature: 30, conditions: "Sunny" },
+  { id: 2, temperature: 25, conditions: "Cloudy" },
+  { id: 3, temperature: 20, conditions: "Rainy" },
+  { id: 4, temperature: 15, conditions: "Windy" },
+  { id: 5, temperature: 10, conditions: "Snowy" }
+];
 
-const App = () => {
+function App() {
   return (
-    <div>
-        {/* Do not remove the main div */}
-    </div>
+    <>
+      {
+        weathers.map((data, index) => {
+          return <WeatherDisplay key={data.id} temperature={data.temperature} conditions={data.conditions} />
+        })
+      }
+    </>
   )
 }
 
