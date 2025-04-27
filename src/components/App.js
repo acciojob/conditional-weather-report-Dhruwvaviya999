@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import WeatherDisplay from './components/WeatherDisplay.jsx'
+import WeatherDisplay from './WeatherDisplay.jsx'
 
 const weathers = [
   { id: 1, temperature: 30, conditions: "Sunny" },
